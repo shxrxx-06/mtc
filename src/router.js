@@ -2,7 +2,7 @@ import {Router} from "express";
 
 import {createProduct, getAllProducts, getSingleProduct, updateProduct, deleteProduct} from "./handlers/products.js";
 import {createEnquiry, getAllEnquiries, getSingleEnquiry, updateEnquiry, deleteEnquiry} from "./handlers/enquiry.js";
-import {updateDetails, getAllDetails, getSingleDetail, updateDetail, deleteDetail} from "./handlers/smas.js";
+import {createDetails, getAllDetails, getSingleDetails, updateDetails, deleteDetails} from "./handlers/smas.js";
 const router = Router()
 
 /* ******** PRODUCT ROUTES ******** */
@@ -16,10 +16,10 @@ router.delete('/product/:id', deleteProduct)
 /* ******** DETAIL ROUTES ******** */
 
 router.get('/details', getAllDetails)
-router.get('/details/:id', getSingleDetail)
-router.post('/details', updateDetails)
-router.put('/detail/:id', updateDetail)
-router.delete('/detail/:id', deleteDetail)
+router.get('/details/:id', getSingleDetails)
+router.post('/details', createDetails)
+router.put('/details/:id', updateDetails)
+router.delete('/detail/:id', deleteDetails)
 
 /* ******** ENQUIRY ROUTES ******** */
 

@@ -64,3 +64,42 @@ model Enquiry {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+model SMAS {
+  id          Int      @id @default(autoincrement())
+  SCODE       String
+  NSCODE      String
+  TYPE        String
+  NAME        String
+  NAME1       String
+  ADD1        String
+  ADD2        String
+  ADD3        String
+  ADD4        String
+  PINCODE     String
+  STATE       String
+  STDCODE     String
+  PHONE1      String
+  PHONE2      String
+  PHONE3      String
+  FAX         String
+  TELEX       String
+  VFROM       DateTime
+  VTO         DateTime
+  ASRTUREF    String
+  ASRTUDT     DateTime
+  VENRATE     Float
+  ACODE       String
+  TINNO       String
+  PANNO       String
+  GSTIN       String
+  MSMENO      String
+  STYP        String
+  UPDDATE     DateTime
+  BANKNAME    String
+  ACNO        String
+  IFSCCODE    String
+  BNKENTYDAT  DateTime
+  CORRDATE    DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt()
+}
